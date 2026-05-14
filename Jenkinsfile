@@ -32,7 +32,7 @@ pipeline{
         sh '''
         docker stop my-app-container || true
         docker rm my-app-container || true
-        docker run -d -p 5000:5000 --name my-app-container $DOCKERIMAGE:$DOCKERTAG
+        docker run -d -p 5010:5000 --name my-app-container $DOCKERIMAGE:$DOCKERTAG
         '''
       }
     }
